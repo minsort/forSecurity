@@ -22,16 +22,14 @@ import java.util.Map;
 @RequestMapping("/api/v1/auth")
 public class AuthenticationRestControllerV1 {
 
-
-    private final AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
 
     private final JwtTokenProvider jwtTokenProvider;
 
     private final UserService userService;
 
     @Autowired
-    public AuthenticationRestControllerV1(AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider, UserService userService) {
-        this.authenticationManager = authenticationManager;
+    public AuthenticationRestControllerV1(JwtTokenProvider jwtTokenProvider, UserService userService) {
         this.jwtTokenProvider = jwtTokenProvider;
         this.userService = userService;
     }
