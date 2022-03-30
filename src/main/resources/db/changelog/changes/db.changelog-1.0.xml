@@ -105,5 +105,6 @@
         <insert tableName="roles">
             <column name="name" value="ROLE_ADMIN"/>
         </insert>
+
     </changeSet>
 </databaseChangeLog>
