@@ -21,10 +21,11 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/auth/")
 public class AuthenticationRestControllerV1 {
-
+    @Autowired
     private AuthenticationManager authenticationManager;
 
     private final JwtTokenProvider jwtTokenProvider;
+
 
     private final UserService userService;
 
